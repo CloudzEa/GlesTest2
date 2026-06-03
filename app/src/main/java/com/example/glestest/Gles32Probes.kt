@@ -46,6 +46,7 @@ object Gles32Probes {
             }
 
             results += extensionEvidenceResults(extensionEvidence)
+            results += ExistingApiCoverageProbes.run()
 
             results += listOf(
                 safeProbe("GL_GEOMETRY_SHADER (#version 320 es)") { probeGeometryShader320Compile() },
